@@ -2,11 +2,17 @@
  *@version 0.01*/
 package EX10;
 
+import java.util.Scanner;
+
 public class Ex10App {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		//Scanner
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		
 	}
 
 }

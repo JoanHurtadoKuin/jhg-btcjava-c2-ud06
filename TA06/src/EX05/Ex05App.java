@@ -7,42 +7,35 @@ import java.util.Scanner;
 public class Ex05App {
 
 	public static void main(String[] args) {
-		//Scanner
+		// Scanner
 		Scanner sc = new Scanner(System.in);
-		/*
-		 * 
-		 * 
-		 * ACABAR!!!
-		 * 
-		 * 
-		 * */
-		//Variable
+
+		// Variable
 		int num;
-		
-		//Programa
+		String binario;
+
+		// Programa
 		System.out.println("Introduce un numero");
 		num = sc.nextInt();
+
+		binario = decimalABinario(num);
 		
-		decimalABinario(num);
+		for (int i = binario.length()-1; i >= 0; i--) { //length -1 para evitar salirse del index
+			System.out.print(binario.charAt(i)); 
+		}
+		sc.close();
 	}
 
-	private static void decimalABinario(int num) {
+	private static String decimalABinario(int num) {
+
+		String binario = "";
 		
-		int division;
-		String resto ="";
-		boolean sePuedeDividir = true;
+		while(num>0) {
+			binario += num%2;
+			num /= 2;
+		}
 		
-		do {
-			if(num/2 != 0) {
-				division = num/2;
-				resto += num%2;
-				System.out.println(resto);
-			}else {
-				sePuedeDividir = false;
-			}
-			
-			
-		} while (!sePuedeDividir);
+		return binario;
 		
 	}
 
