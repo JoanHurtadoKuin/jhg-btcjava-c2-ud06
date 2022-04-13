@@ -44,6 +44,7 @@ public class Ex10App {
 		}
 		
 		System.out.println("El numero mas grande de la array es: " + numeroGrande(arrayNumeros));
+		sc.close();
 	}
 	
 	private static boolean calcularNumeroPrimo(int num) {
