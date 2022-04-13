@@ -42,6 +42,8 @@ public class Ex10App {
 			} while (!salir);
 		
 		}
+		
+		System.out.println("El numero mas grande de la array es: " + numeroGrande(arrayNumeros));
 	}
 	
 	private static boolean calcularNumeroPrimo(int num) {
@@ -65,5 +67,18 @@ public class Ex10App {
         numeroAleatorio = (int) Math.floor(Math.random() * (max - min + 1) + min);
 				
 		return numeroAleatorio;
+	}
+	
+	private static int numeroGrande(int[] array) {
+		int numeroGrande = 0;
+		
+		for (int i = 0; i < array.length; i++) {
+			
+			if(array[i]>numeroGrande) {
+				numeroGrande = array[i];
+			}
+		}
+				
+		return numeroGrande;	
 	}
 }
